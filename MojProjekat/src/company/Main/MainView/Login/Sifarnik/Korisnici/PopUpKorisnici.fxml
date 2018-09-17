@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane id="popUpKorisnici" prefHeight="840.0" prefWidth="590.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="company.Main.MainView.Login.Sifarnik.Korisnici.PopUpKorisniciController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Meni">
+            <items>
+              <MenuItem fx:id="menuPrint" mnemonicParsing="false" onAction="#printPopUpKorisnici" text="Print" />
+                  <MenuItem fx:id="menuExport" mnemonicParsing="false" onAction="#exportToPdf" text="Izvezi dokument" />
+                  <MenuItem fx:id="menuClose" mnemonicParsing="false" onAction="#closePopUpKorisnici" text="Izadji" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TextFlow id="textFlowPUKor" fx:id="textFlow" prefHeight="842.0" prefWidth="595.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="842.0" prefWidth="100.0">
+               <children>
+                  <Label id="jobStatus" fx:id="jobStatus" prefHeight="146.0" prefWidth="149.0" />
+               </children></Pane>
+            <TableView fx:id="korisnikTable" prefHeight="700.0" prefWidth="400.0">
+              <columns>
+                <TableColumn id="columnImePUKor" fx:id="korisnikImeColumn" editable="false" prefWidth="200.0" sortable="false" text="Ime" />
+            <TableColumn id="columnPrezimePUKor" fx:id="korisnikPrezimeColumn" editable="false" prefWidth="199.0" sortable="false" text="Prezime" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Pane prefHeight="842.0" prefWidth="100.0" />
+         </children></TextFlow>
+   </center>
+</BorderPane>

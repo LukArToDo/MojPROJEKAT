@@ -1,0 +1,477 @@
+
+/*********************************************TEXT FIELD*************************************************/
+
+.text-field {
+    -fx-background-color: transparent;
+/*   -fx-border-width:1 ;
+   -fx-border-color:rgb(255,255,0);*/
+    -fx-padding: 0.166667em;
+    -fx-text-fill:rgb(0,64,0);
+    -fx-font-weight: bold;
+    -fx-font-size: 14;    
+  -fx-background-insets: 0, 1;
+ -fx-background-radius: 3, 2;
+}
+ 
+.text-field:hover {
+    -fx-background-color:rgb(229,229,229,0.8);
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-padding: 0.166667em;
+    -fx-text-fill:rgb(0,0,255) ;
+	-fx-font-size: 18;
+}
+ 
+.text-field:focused {
+    
+    -fx-background-color:rgb(255,255,255,0.8); /*transparent, lightgrey, transparent, white;*/
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-padding: 0.166667em;
+     -fx-text-fill:rgb(0,0,0) ;
+     -fx-font-size: 14;
+}
+
+
+#brIzvodText, #brIzvodText:focused {
+	-fx-font-size:18;
+}
+
+#brIzvodText:hover {
+	-fx-font-size:22;
+}
+#datIzvodText, #datIzvodText:focused {
+	-fx-font-size:18;
+}
+
+#datIzvodText:hover {
+	-fx-font-size:22;
+}
+#bankaKMText, #bankaKMText:focused {
+	-fx-font-size:18;
+}
+
+#bankaKMText:hover {
+	-fx-font-size:22;
+}
+#nStanjeText,#nStanjeText:focused{
+	-fx-font-size:16;
+}
+
+#nStanjeText:hover{
+	-fx-font-size:20;
+}
+
+
+
+
+/*********************************************TABLE VIEW ***************************************************/
+.table-view{
+   -fx-background-color: transparent;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: #003366;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+   -fx-text-fill:rgb(128,255,0);
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: white;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, rgb(0, 77, 153,0.95);
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, rgb(0, 77, 153,0.90);
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */  
+}
+
+.table-row-cell:selected {
+    -fx-background-color:rgb(244,50,45,0.7);
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.table-row-cell:hover {
+   -fx-background-color:rgb(9,0,166,0.7);
+}
+
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background, 
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+
+
+
+.table-view > .virtual-flow > .scroll-bar > .increment-button, 
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}
+
+.table-view .filler{
+	-fx-padding: 0.0em;
+}
+
+.table-view .scroll-bar:horizontal .increment-arrow,
+.table-view .scroll-bar:horizontal .decrement-arrow,
+.table-view .scroll-bar:horizontal .increment-button,
+.table-view .scroll-bar:horizontal .decrement-button {
+    -fx-padding:0;
+}
+
+.table-view .scroll-bar:horizontal:hover .track ,
+.table-view .scroll-bar:horizontal:pressed .track ,
+.table-view .scroll-bar:vertical:hover .track,
+.table-view .scroll-bar:vertical:pressed .track{
+     -fx-background-color: derive(#434343,70%);
+	 -fx-opacity: 0.5;
+	  
+	 -fx-background-radius: 0em;  
+}
+
+.table-view .scroll-bar .thumb:hover,
+.table-view .scroll-bar .thumb:pressed{
+    -fx-background-color: derive(black,80%);
+}
+
+
+
+/****************************************************BUTTONS*****************************************************/
+
+.button {
+
+-fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 4 , 0 );
+-fx-background-color:rgb(216,216,216);
+
+}
+
+.button:hover {
+    -fx-padding: 10 15 13 15;
+    -fx-background-color:rgb(192,192,192);
+    -fx-text-fill:rgb(0,221,0);
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+
+
+/*************************************************LABEL***************************************************/
+
+
+.label {
+	-fx-text-fill:rgb(128,255,0);
+}
+
+
+
+
+/*********************************************textarea************************************************** */
+.text-area {
+    -fx-effect: innershadow(one-pass-box, gray, 5, 0.3, 1, 1);
+    -fx-background-color:transparent;
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-padding: 0.166667em;
+	-fx-text-fill: rgb(0,0,255) ;
+  }  
+  
+  /* the way tho change areatext background */
+.text-area, .text-area .viewport, .text-area .content {
+    -fx-background-color:rgb(255,255,255,0.6) ;
+      -fx-effect: innershadow(one-pass-box, gray, 5, 0.3, 1, 1);
+   
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-padding: 0.166667em;
+    
+	-fx-text-fill: rgb(0,0,255) 
+}
+/*.text-area .content{
+      -fx-background-color: transparent;
+  }
+    
+ .styled-text-area {
+	   -fx-background-color: transparent;
+}
+    
+.styled-text-area .content {
+	   -fx-background-color: transparent;
+}
+*/
+.text-area:input {
+  -fx-background-color: linear-gradient(to bottom, derive(-fx-text-box-border, -10%), -fx-text-box-border),
+    linear-gradient(from 0px 0px to 0px 5px, derive(-fx-control-inner-background, -9%), -fx-control-inner-background);
+    
+  -fx-background-insets: 0, 1;
+  -fx-background-radius: 3, 2;
+}
+
+.text-area, .text-area .viewport, .text-area .content:hover {
+    -fx-background-color:rgb(255,255,255) ; 
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-padding: 0.166667em;
+    
+
+}
+
+.text-area:hover{
+	-fx-font-size: 14;
+	-fx-text-fill: rgb(255,0,0) ;
+}
+
+.text-area:focused{
+	-fx-text-fill: rgb(0,0,0); 
+}
+
+
+
+
+/*************************************************TOOL BAR **************************************************/
+
+
+#btnNew, #btnEdit, #btnDelete, #btnDone, #btnPrint, #btnExit {
+    -fx-background-color: 
+        #000000,
+        linear-gradient(#7ebcea, #2f4b8f),
+        linear-gradient(#426ab7, #263e75),
+        linear-gradient(#395cab, #223768);
+  -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 10px;
+}
+
+ #btnDone {
+ 	-fx-text-fill:rgb(0,221,0);
+ }
+ 
+ #btnExit {
+ 	-fx-text-fill:red ;
+ 	 -fx-font-weight: bold;
+ }
+
+
+.tool-bar:vertical { /* left */
+
+    -fx-background-color: transparent   ;
+
+    -fx-background-insets: 0, 0 0 0 1;
+
+    -fx-padding: 0.5em 0.416667em 0.5em 0.416667em; /* 6 5 6 5 */
+
+    -fx-spacing: 0.333em; /* 4 */
+
+    -fx-alignment: TOP_LEFT;
+
+}
+
+.tool-bar { /* top */
+
+   
+
+    -fx-background-color: transparent;
+    
+    -fx-background-insets: 0 0 0 0, 1 0 1 0;
+
+    -fx-padding: 0.416667em 0.5em 0.416667em 0.5em; /* 5 6  5 6 */
+
+    -fx-spacing: 0.333em; /* 4 */
+
+    -fx-alignment: CENTER_LEFT;
+
+}
+
+.tool-bar:vertical.right {
+
+    -fx-background-insets: 0, 0 1 0 0;
+
+}
+
+.tool-bar.bottom {
+
+    -fx-background-color: transparent;
+
+
+
+    -fx-background-insets: 0, 1 0 0 0, 2 0 0 0;
+
+}
+
+.tool-bar > .container > .separator {
+
+    -fx-orientation: vertical;
+
+}
+
+.tool-bar:vertical > .container > .separator {
+
+    -fx-orientation: horizontal;    
+
+}
+
+.tool-bar-overflow-button {
+
+    -fx-padding: 0 0.75em 0 0 ;
+
+}
+
+.tool-bar:vertical > .tool-bar-overflow-button {
+
+    -fx-padding: 0 0 0.75em 0 ;
+
+}
+
+.tool-bar-overflow-button > .arrow {
+
+    -fx-background-color: black;
+
+    -fx-background-insets: 1 0 -1 0, 0;
+
+    -fx-padding: 0.666667em 0.916667em 0em 0em; /* 8 11 0 0 */
+
+    -fx-shape: "M337.273,297.622l-0.016,1.069l2.724,2.639l-2.723,2.628l0.015,1.048h0.881l3.81-3.685l-3.788-3.699H337.273z M343.783,297.622h-0.902l-0.015,1.069l2.724,2.639l-2.724,2.628l0.015,1.048h0.882l3.809-3.685L343.783,297.622z" ;
+
+}
+
+
+.tool-bar-overflow-button:focused > .arrow {
+
+    -fx-background-color: derive(black, 70%);
+
+    -fx-background-insets: 1 0 -1 0, 0;
+
+}
+
+
+.tool-bar-overflow-button:hover > .arrow {
+
+    -fx-background-color: derive(black, 85%);
+
+    -fx-background-insets: 1 0 -1 0, 0;
+
+}
+
+
+
+
+/***************************************************LIST VIEW*************************************************/
+
+
+.list-cell:even { -fx-background-color:rgb(0, 77, 153,0.90);
+	 -fx-background-insets: 0;
+-fx-padding: 0;
+    -fx-text-fill: white;
+}
+
+
+.list-cell{
+    -fx-background-color:  rgb(0, 77, 153,0.90);
+    -fx-border-color:transparent;
+     -fx-background-insets: 0;
+	-fx-padding: 0;
+  
+}
+
+.list-cell:odd{
+    -fx-background-color:  rgb(0, 77, 153,0.95);
+     -fx-background-insets: 0;
+	-fx-padding: 0;
+    -fx-text-fill: white;
+}
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color:rgb(244,50,45,0.7);
+    -fx-background-insets: 0;
+	-fx-padding: 0;
+}
+
+.list-cell:hover {
+   -fx-background-color:rgb(0,0,0,0.1);
+    -fx-background-insets: 0;
+	-fx-padding: 0;
+	-fx-text-fill: black;
+}
+
+
+.list-view {
+	-fx-border-color:derive(rgb(0, 77, 153,0.90),80%);
+	-fx-background-insets: 0;
+	-fx-padding: 0;
+}
+
+.list-view .scroll-bar:vertical .increment-arrow,
+.list-view .scroll-bar:vertical .decrement-arrow,
+.list-view .scroll-bar:vertical .increment-button,
+.list-view .scroll-bar:vertical .decrement-button {
+    -fx-padding:0;
+}
+
+.list-view .scroll-bar:horizontal:hover .track ,
+.list-view .scroll-bar:horizontal:pressed .track ,
+.list-view .scroll-bar:vertical:hover .track,
+.list-view .scroll-bar:vertical:pressed .track{
+     -fx-background-color: derive(rgb(0, 77, 153,0.90),70%);
+	 -fx-opacity: 0.5;
+	  
+	 -fx-background-radius: 0em;  
+}
+
+.list-view .scroll-bar:horizontal{
+	-fx-background-color:rgb(0, 77, 153);
+}
+.list-view .scroll-bar .thumb:hover,
+.list-view .scroll-bar .thumb:pressed{
+    -fx-background-color: derive(rgb(0, 77, 153,0.90),80%);
+}
+
+
+.list-increment-button:hover ,.list-view .decrement-button:hover {
+    -fx-background-color:derive(lightblue,100%);
+	-fx-border-color:derive(lightblue,80%);	
+	-fx-padding:10px;
+}
+
+/**************************************************CALENDAR**************************************************/
+
+
+.calendar-cell:hover { 
+    -fx-background-color: rgba(135,206,235,0.7);
+    -fx-text-fill: white;   
+}
+
+.calendar-cell:pressed { 
+    -fx-background-color: rgba(135,186,215,0.7);
+    -fx-text-fill: white;   
+}
+
+.calendar-cell-selected { 
+    -fx-background-color: rgba(105,176,195,0.7);
+    -fx-text-fill: white;   
+}
+
+.calendar-cell-today { 
+    -fx-background-color: rgba(155,155,19,0.7);
+    -fx-text-fill: white;
+}
+
+.calendar-cell-inactive { 
+    -fx-text-fill: darkgray;
+}
+

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import org.controlsfx.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="putniNalog" prefHeight="523.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="company.Main.MainView.Login.Ostalo.PutniNalog.PutniNalogController">
+	<children>
+	  <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="500.0">
+        <menus>
+          <Menu mnemonicParsing="false">
+            <items>
+              <MenuItem fx:id="noviNalog" mnemonicParsing="false" onAction="#newNalog" text="Novi nalog" />
+            </items>
+               <graphic>
+                  <Label prefWidth="60.0" text="NEW">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </graphic>
+          </Menu>
+            <Menu mnemonicParsing="false">
+               <items>
+                  <MenuItem fx:id="stampajNalog" mnemonicParsing="false" onAction="#print" text="Stampaj nalog" />
+               </items>
+               <graphic>
+                  <Label prefWidth="60.0" text="PRINT">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </graphic>
+            </Menu>
+            <Menu mnemonicParsing="false">
+               <graphic>
+                  <Label prefWidth="80.0" text="SIFARNIK">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </graphic>
+               <items>
+                  <MenuItem fx:id="putniPravac" mnemonicParsing="false" onAction="#newPravac" text="Putni pravac" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false">
+               <items>
+                  <MenuItem fx:id="close" mnemonicParsing="false" onAction="#exitFromScene" text="Close">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Icons/Actions-edit-delete-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+               </items>
+               <graphic>
+                  <Label prefWidth="60.0" text="EXIT">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </graphic>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="45.0" layoutY="91.0" prefHeight="15.0" prefWidth="94.0" text="Ime i prezime:" />
+      <Label layoutX="45.0" layoutY="152.0" prefHeight="15.0" prefWidth="94.0" text="Svrha posjete (1):" />
+      <Label layoutX="45.0" layoutY="206.0" prefHeight="15.0" prefWidth="81.0" text="Pravac posjete:" />
+      <Label layoutX="45.0" layoutY="238.0" prefHeight="15.0" prefWidth="81.0" text="Mjesta posjete:" />
+      <Label layoutX="45.0" layoutY="459.0" prefHeight="15.0" prefWidth="112.0" text="Cijena goriva po lit:" />
+      <Label layoutX="45.0" layoutY="65.0" prefHeight="15.0" prefWidth="94.0" text="Datum naloga:" />
+      <Label layoutX="420.0" layoutY="69.0" prefHeight="17.0" prefWidth="125.0" text="Broj dana na putu:" />
+      <Label layoutX="43.0" layoutY="310.0" prefHeight="17.0" prefWidth="180.0" text="Polazak ( datum / sati / minuti) :" />
+      <Label layoutX="43.0" layoutY="334.0" prefHeight="17.0" prefWidth="188.0" text="Povratak ( datum / sati / minuti) :" />
+      <Label layoutX="45.0" layoutY="384.0" prefHeight="15.0" prefWidth="102.0" text="Broj dana u zemlji:" />
+      <Label layoutX="45.0" layoutY="410.0" prefHeight="17.0" prefWidth="133.0" text="Broj dana u inostranstvu:" />
+      <Separator layoutX="30.0" layoutY="267.0" prefHeight="1.0" prefWidth="740.0" />
+      <Label layoutX="45.0" layoutY="283.0" text="OBRAČUN:" underline="true" />
+      <Label layoutX="45.0" layoutY="40.0" prefHeight="15.0" prefWidth="144.0" text="Broj naloga:" />
+      <Label layoutX="420.0" layoutY="141.0" prefHeight="15.0" prefWidth="113.0" text="Vozilo je u vlasništvu:" />
+      <Label layoutX="420.0" layoutY="109.0" prefHeight="15.0" prefWidth="102.0" text="Vozilo se koristi:" />
+      <Label layoutX="420.0" layoutY="195.0" text="Tip vozila i registracija:" />
+      <Label layoutX="420.0" layoutY="227.0" text="Vlasnik vozila:" />
+      <Label layoutX="45.0" layoutY="487.0" prefHeight="15.0" prefWidth="112.0" text="Pređeni kilometri:" />
+      <Label layoutX="45.0" layoutY="175.0" prefHeight="15.0" prefWidth="94.0" text="Svrha posjete (2):" />
+      <Label layoutX="252.0" layoutY="411.0" text="visina dnevnice u EUR:" />
+      <Label layoutX="255.0" layoutY="385.0" text="visina dnevnice u KM:" />
+      <TextField fx:id="tfBrNaloga" layoutX="150.0" layoutY="36.0" prefHeight="23.0" prefWidth="102.0" />
+      <DatePicker fx:id="dpDatumN" layoutX="150.0" layoutY="60.0" prefHeight="25.0" prefWidth="125.0" />
+      <ComboBox fx:id="cbKorisnik" layoutX="150.0" layoutY="87.0" prefHeight="23.0" prefWidth="237.0" />
+      <TextField fx:id="tfZvanje" layoutX="150.0" layoutY="113.0" prefHeight="23.0" prefWidth="237.0" />
+      <ComboBox fx:id="cbSvrha1" layoutX="150.0" layoutY="148.0" prefHeight="23.0" prefWidth="237.0" />
+      <ComboBox fx:id="cbSvrha2" layoutX="150.0" layoutY="171.0" prefHeight="23.0" prefWidth="237.0" />
+      <ComboBox fx:id="cbPravac" layoutX="150.0" layoutY="203.0" prefHeight="23.0" prefWidth="237.0" />
+      <TextField fx:id="tfMjesta" layoutX="150.0" layoutY="234.0" prefHeight="23.0" prefWidth="237.0" />
+      <TextField fx:id="tfBrDana" alignment="CENTER_RIGHT" layoutX="550.0" layoutY="65.0" prefHeight="23.0" prefWidth="63.0" styleClass="brojdana" />
+      <RadioButton fx:id="rbDa" layoutX="550.0" layoutY="109.0" mnemonicParsing="false" selected="true" text="da">
+         <toggleGroup>
+            <ToggleGroup fx:id="useVozilo" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rbNe" layoutX="590.0" layoutY="109.0" mnemonicParsing="false" onAction="#voziloSaBez" text="ne" toggleGroup="$useVozilo" />
+      <RadioButton fx:id="rbPrivatno" layoutX="550.0" layoutY="141.0" mnemonicParsing="false" selected="true" text="privatno">
+         <toggleGroup>
+            <ToggleGroup fx:id="propertyVozilo" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rbSluzbeno" layoutX="550.0" layoutY="164.0" mnemonicParsing="false" text="sluzbeno" toggleGroup="$propertyVozilo" />
+      <TextField fx:id="tfVoziloData" layoutX="545.0" layoutY="191.0" prefHeight="23.0" prefWidth="220.0" />
+      <TextField fx:id="tfVoziloVlasnik" layoutX="545.0" layoutY="223.0" prefHeight="23.0" prefWidth="220.0" />
+      <TextField fx:id="tfDateGo" alignment="CENTER_RIGHT" layoutX="250.0" layoutY="306.0" prefHeight="23.0" prefWidth="94.0" />
+      <TextField fx:id="tfHoursGo" layoutX="356.0" layoutY="306.0" prefHeight="23.0" prefWidth="32.0" />
+      <TextField fx:id="tfMinutGo" layoutX="389.0" layoutY="306.0" prefHeight="23.0" prefWidth="32.0" />
+      <TextField fx:id="tfDateReturn" alignment="CENTER_RIGHT" layoutX="250.0" layoutY="330.0" prefHeight="23.0" prefWidth="94.0" />
+      <TextField fx:id="tfHoursReturn" layoutX="356.0" layoutY="330.0" prefHeight="23.0" prefWidth="32.0" />
+      <TextField fx:id="tfMinutReturn" layoutX="389.0" layoutY="330.0" prefHeight="23.0" prefWidth="32.0" />
+      <TextField fx:id="tfBrDanaDD" alignment="CENTER_RIGHT" layoutX="180.0" layoutY="380.0" onAction="#changeDnevnice" prefHeight="23.0" prefWidth="45.0" />
+      <TextField fx:id="tfIznosDD" alignment="CENTER_RIGHT" layoutX="375.0" layoutY="381.0" onAction="#changeDnevnice" prefHeight="23.0" prefWidth="45.0" />
+      <TextField fx:id="tfBrojDanaID" alignment="CENTER_RIGHT" layoutX="180.0" layoutY="406.0" onAction="#changeDnevnice" prefHeight="23.0" prefWidth="45.0" />
+      <TextField fx:id="tfIznosID" alignment="CENTER_RIGHT" layoutX="375.0" layoutY="407.0" onAction="#changeDnevnice" prefHeight="23.0" prefWidth="45.0" />
+      <TextField fx:id="tfGorivo" alignment="CENTER_RIGHT" layoutX="180.0" layoutY="455.0" prefHeight="23.0" prefWidth="45.0" />
+      <TextField fx:id="tfKM" alignment="CENTER_RIGHT" layoutX="180.0" layoutY="482.0" prefHeight="23.0" prefWidth="45.0" />
+      <Separator layoutX="31.0" layoutY="526.0" prefHeight="1.0" prefWidth="682.0" />
+      <Label layoutX="471.0" layoutY="310.0" text="Ostali troškovi (racuni u prilogu):" />
+      <Label layoutX="515.0" layoutY="330.0" text="broj računa">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="670.0" layoutY="330.0" text="iznos računa u KM">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfRacun1" layoutX="513.0" layoutY="349.0" prefHeight="23.0" prefWidth="154.0" />
+      <TextField fx:id="tfIznosR1" alignment="CENTER_RIGHT" layoutX="669.0" layoutY="349.0" prefHeight="23.0" prefWidth="81.0" />
+      <TextField fx:id="tfRacun2" layoutX="513.0" layoutY="373.0" prefHeight="23.0" prefWidth="154.0" />
+      <TextField fx:id="tfIznosR2" alignment="CENTER_RIGHT" layoutX="670.0" layoutY="373.0" prefHeight="23.0" prefWidth="81.0" />
+      <TextField fx:id="tfRacun3" layoutX="513.0" layoutY="399.0" prefHeight="23.0" prefWidth="154.0" />
+      <TextField fx:id="tfIznosR3" alignment="CENTER_RIGHT" layoutX="670.0" layoutY="399.0" prefHeight="23.0" prefWidth="81.0" />
+      <TextField fx:id="tfUkupnoOstalo" alignment="CENTER_RIGHT" layoutX="682.0" layoutY="432.0" prefHeight="23.0" prefWidth="81.0" />
+      <Label layoutX="541.0" layoutY="436.0" text="Ukupno ostali troškovi :" />
+      <Label layoutX="515.0" layoutY="545.0" prefHeight="20.0" text="Ukupno DOMAĆE DNEVNICE :" />
+      <Label layoutX="515.0" layoutY="560.0" prefHeight="20.0" text="Ukupno INO DNEVNICE :" />
+      <Label layoutX="515.0" layoutY="580.0" prefHeight="20.0" text="UKUPNO DNEVNICE :" />
+      <Label fx:id="lbDD" alignment="CENTER_RIGHT" layoutX="685.0" layoutY="545.0" prefHeight="20.0" prefWidth="50.0" text="0.00" />
+      <Label fx:id="lbID" alignment="CENTER_RIGHT" layoutX="685.0" layoutY="559.0" prefHeight="20.0" prefWidth="50.0" text="0.00" />
+      <Label fx:id="lbDnevnice1" alignment="CENTER_RIGHT" layoutX="685.0" layoutY="580.0" prefHeight="20.0" prefWidth="50.0" text="0.00" />
+      <Label layoutX="736.0" layoutY="545.0" prefHeight="20.0" text="KM" />
+      <Label layoutX="736.0" layoutY="559.0" prefHeight="20.0" text="KM" />
+      <Label layoutX="736.0" layoutY="580.0" prefHeight="20.0" text="KM" />
+      <Label layoutX="290.0" layoutY="560.0" prefHeight="20.0" prefWidth="20.0" text="KM" />
+      <Label fx:id="lbDnevnice" alignment="CENTER_RIGHT" layoutX="235.0" layoutY="560.0" prefHeight="20.0" prefWidth="50.0" text="0.00" textAlignment="RIGHT" />
+      <Label layoutX="45.0" layoutY="560.0" prefHeight="20.0" prefWidth="180.0" text="TROŠKOVI DNEVNICA :" />
+      <Label layoutX="45.0" layoutY="580.0" prefHeight="20.0" prefWidth="204.0" text="NAKNADA ZA KORIŠTENJE VOZILA :" />
+      <Label fx:id="lbTrVozilo" alignment="CENTER_RIGHT" layoutX="235.0" layoutY="580.0" prefHeight="20.0" prefWidth="50.0" text="0.00" textAlignment="RIGHT" />
+      <Label layoutX="290.0" layoutY="580.0" prefHeight="20.0" prefWidth="20.0" text="KM" />
+      <Label layoutX="45.0" layoutY="600.0" prefHeight="20.0" prefWidth="180.0" text="OSTALI TROŠKOVI :" />
+      <Label fx:id="lbOstaliTR" alignment="CENTER_RIGHT" layoutX="235.0" layoutY="600.0" prefHeight="20.0" prefWidth="50.0" text="0.00" textAlignment="RIGHT" />
+      <Label layoutX="290.0" layoutY="600.0" prefHeight="20.0" prefWidth="20.0" text="KM" />
+      <Separator layoutX="400.0" layoutY="550.0" orientation="VERTICAL" prefHeight="200.0" />
+      <Line endX="60.0" layoutX="250.0" layoutY="623.0" />
+      <Label layoutX="45.0" layoutY="640.0" prefHeight="20.0" prefWidth="180.0" text="UKUPNO TROŠKOVI :" />
+      <Label fx:id="lbUkupniTROSKOVI" alignment="CENTER_RIGHT" layoutX="220.0" layoutY="640.0" prefHeight="20.0" prefWidth="60.0" text="0.00" textAlignment="RIGHT">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="290.0" layoutY="640.0" prefHeight="20.0" prefWidth="20.0" text="KM">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="515.0" layoutY="643.0" text="Obračunato dana: " />
+      <Label fx:id="lbDateObracuna" layoutX="613.0" layoutY="643.0" prefHeight="15.0" prefWidth="69.0" />
+      <Label layoutX="45.0" layoutY="117.0" prefHeight="15.0" prefWidth="94.0" text="Zvanje/polozaj:" />
+      <Separator layoutX="55.0" layoutY="445.0" prefHeight="1.0" prefWidth="350.0" />
+      <Separator layoutX="452.0" layoutY="293.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="1.0" />
+      <Separator layoutX="60.0" layoutY="370.0" prefHeight="1.0" prefWidth="350.0" />
+      <Label layoutX="255.0" layoutY="459.0" prefHeight="17.0" prefWidth="167.0" text="Koeficijent naknade :         0.20" />
+      <Label layoutX="255.0" layoutY="487.0" text="Ukupno naknada :" />
+      <Label fx:id="lbNaknada" alignment="CENTER_RIGHT" layoutX="361.0" layoutY="487.0" prefHeight="17.0" prefWidth="59.0" text="0.00" />
+	</children>
+</AnchorPane>

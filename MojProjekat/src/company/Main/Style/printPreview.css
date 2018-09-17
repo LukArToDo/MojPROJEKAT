@@ -1,0 +1,150 @@
+
+/*********************************************TABLE VIEW ***************************************************/
+.table-view{
+   -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: white;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-font-size:9px;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-width: 0.05mm;
+    -fx-border-color: rgb(172,172,172);
+}
+
+.table-view .table-cell{
+    -fx-text-fill: black;
+    -fx-font-size: 9px;
+   /* -fx-border-width: 0.05mm ;
+    -fx-border-color: rgb(172,172,172);*/
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #ffffff;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */  
+}
+
+.table-row-cell:empty {
+-fx-background-color: white;
+}
+
+.table-row-cell .table-cell:empty {
+-fx-border-width: 0px;
+}
+.table-view .filler{
+	-fx-background-color:transparent ;
+	-fx-padding: 0.0em;
+}
+
+/* The main scrollbar **track** CSS class  */
+
+.table-view .scroll-bar:vertical .track{
+     -fx-padding:0px;
+	-fx-background-color:transparent;
+	-fx-border-color:transparent;
+	-fx-background-radius: 0em;
+	-fx-border-radius:2em;
+
+}
+
+/* The increment and decrement button CSS class of scrollbar */
+
+.table-view .scroll-bar:vertical .increment-button ,
+.table-view .scroll-bar:vertical .decrement-button {
+
+    -fx-background-color:transparent;
+	-fx-background-radius: 0em;
+	-fx-padding:0 0 0 0;
+}
+
+.table-view  .scroll-bar:vertical .increment-arrow,
+.table-view  .scroll-bar:vertical  .decrement-arrow
+{
+	-fx-shape: " ";	
+	-fx-padding:0;        
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color:transparent;
+	-fx-background-insets: 0, 0, 0;
+	-fx-background-radius: 2em;
+    -fx-padding:0px;
+
+}
+
+.table-view .scroll-bar:horizontal .track{
+     -fx-padding:0px;
+	-fx-background-color:transparent;
+	-fx-border-color:transparent;
+	-fx-background-radius: 0em;
+	-fx-border-radius:2em;
+
+}
+
+/* The increment and decrement button CSS class of scrollbar */
+
+.table-view .scroll-bar:horizontal .increment-button ,
+.table-view .scroll-bar:horizontal .decrement-button {
+
+    -fx-background-color:transparent;
+	-fx-background-radius: 0em;
+	-fx-padding:0 0 0 0;
+}
+
+.table-view  .scroll-bar:horizontal .increment-arrow,
+.table-view  .scroll-bar:horizontal  .decrement-arrow
+{
+	-fx-shape: " ";	
+	-fx-padding:0;        
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.table-view .scroll-bar:horizontal .thumb {
+    -fx-background-color:transparent;
+	-fx-background-insets: 0, 0, 0;
+	-fx-background-radius: 2em;
+    -fx-padding:0px;
+
+}
+/****************************************************BUTTONS*****************************************************/
+
+.button {
+
+-fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 4 , 0 );
+-fx-background-color:rgb(216,216,216);
+
+}
+
+.button:hover {
+    -fx-padding: 10 15 13 15;
+    -fx-background-color:rgb(192,192,192);
+    -fx-text-fill:rgb(0,221,0);
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+
+
+/*************************************************LABEL***************************************************/
+
+
+.label {
+	-fx-text-fill:rgb(0,0,0);
+	-fx-font-size:9px;
+	-fx-background-color:rgb(255,255,255);
+}
+
+.hbox {
+	-fx-background-color:rgb(255,255,255)
+}
+
+
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="app" fx:id="app" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="company.Main.MainView.Login.Ostalo.PutniNalog.TablePravacController">
+   <children>
+      <TableView fx:id="table" layoutX="444.0" layoutY="40.0" prefHeight="300.0" prefWidth="542.0">
+         <columns>
+            <TableColumn fx:id="pravacColumn" prefWidth="447.0" text="PRAVAC" />
+            <TableColumn fx:id="kmColumn" prefWidth="94.0" text="KM" />
+         </columns>
+      </TableView>
+      <Label layoutX="444.0" layoutY="15.0" text="Pregled svih pavaca iz baze:" />
+      <Label layoutX="14.0" layoutY="15.0" text="Dodavanje novih pravaca u bazi podataka:" />
+      <Separator layoutX="430.0" layoutY="17.0" orientation="VERTICAL" prefHeight="373.0" prefWidth="0.0" />
+      <VBox id="vbLabel" fx:id="vbLabel" layoutX="14.0" layoutY="57.0" prefHeight="227.0" prefWidth="147.0" spacing="8.0">
+         <children>
+            <Label prefHeight="20.0" text="Mjesto poslaska/povratka:" />
+            <Label prefHeight="20.0" text="Mjesto posjete:" />
+         </children>
+      </VBox>
+      <Label layoutX="20.0" layoutY="310.0" text="Zeljeni pravac:" />
+      <Label layoutX="20.0" layoutY="290.0" text="Ukupna udaljenost u km:" />
+      <VBox id="vbText" fx:id="vbText" layoutX="179.0" layoutY="57.0" prefHeight="217.0" prefWidth="111.0">
+         <children>
+            <TextField fx:id="tfStart" prefHeight="20.0" />
+            <TextField fx:id="tfMjesto1" prefHeight="20.0" />
+         </children>
+      </VBox>
+      <Separator layoutX="52.0" layoutY="274.0" prefHeight="3.0" prefWidth="314.0" />
+      <Label fx:id="pravacLabel" layoutX="20.0" layoutY="335.0" />
+      <TextField fx:id="tfKM" layoutX="162.0" layoutY="286.0" prefHeight="25.0" prefWidth="53.0" />
+      <Button fx:id="addToBase" layoutX="20.0" layoutY="360.0" mnemonicParsing="false" onAction="#addToBase" text="Dodaj novo" />
+      <Button fx:id="cancel" layoutX="255.0" layoutY="360.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+      <VBox fx:id="vbAdd" layoutX="301.0" layoutY="81.0" prefHeight="204.0" prefWidth="26.0">
+         <children>
+            <Button fx:id="add" mnemonicParsing="false" onAction="#addTextField" prefHeight="25.0" prefWidth="25.0" text="+">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <VBox fx:id="vbRemove" layoutX="327.0" layoutY="81.0" prefHeight="204.0" prefWidth="26.0">
+         <children>
+            <Button fx:id="remove" mnemonicParsing="false" prefHeight="25.0" prefWidth="29.0" text="-">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Button fx:id="close" layoutX="353.0" layoutY="360.0" mnemonicParsing="false" onAction="#close" prefWidth="50.0" text="EXIT" />
+      <Button fx:id="btnEdit" layoutX="115.0" layoutY="360.0" mnemonicParsing="false" onAction="#updatePravac" text="Ispravi" />
+      <Button fx:id="btnDelete" layoutX="185.0" layoutY="360.0" mnemonicParsing="false" onAction="#deletePravac" text="Delete" />
+   </children>
+</AnchorPane>

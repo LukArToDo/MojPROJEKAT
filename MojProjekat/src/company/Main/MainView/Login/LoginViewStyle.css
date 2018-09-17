@@ -1,0 +1,15 @@
+.button {
+-fx-font: bold italic 12pt "Arial";
+-fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );
+}
+
+.button:hover {
+    -fx-padding: 10 15 13 15;
+    -fx-background-color:rgb(192,192,192);
+    -fx-text-fill:rgb(0,128,0);
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+ #exit {
+ 	-fx-text-fill:red ;
+ 	 -fx-font-weight: bold;
+ }

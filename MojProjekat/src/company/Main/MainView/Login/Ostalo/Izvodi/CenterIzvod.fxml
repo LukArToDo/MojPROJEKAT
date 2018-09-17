@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="850.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="company.Main.MainView.Login.Ostalo.Izvodi.CenterIzvodController">
+   <children>    
+      <Button fx:id="uveziIzvod" layoutX="61.0" layoutY="50.0" mnemonicParsing="false" onAction="#goToGetIzvod" prefHeight="40.0" prefWidth="100.0" text="Uvezi izvod">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

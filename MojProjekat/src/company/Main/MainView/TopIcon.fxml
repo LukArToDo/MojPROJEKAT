@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+
+
+<VBox fx:id="vbMenuRight" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="company.Main.MainView.TopIconController">
+   <children>
+      <HBox fx:id="hbIcon">
+         <children>
+            <HBox fx:id="hb">
+               <children>
+                  <Pane fx:id="paneBackup">
+                     <children>
+                        <ImageView fx:id="backupIcon" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#backupDataBase" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/Backup.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="1.0" right="1.0" top="2.0" />
+                     </HBox.margin>
+                  </Pane>
+                  <Pane fx:id="paneRestore">
+                     <children>
+                        <ImageView fx:id="restoreIcon" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#restoreData" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/Restore.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="1.0" right="1.0" top="2.0" />
+                     </HBox.margin>
+                  </Pane>
+                  <Pane fx:id="paneInfo">
+                     <children>
+                        <ImageView fx:id="infoIcon" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#aboutProgram" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/info.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="1.0" right="1.0" top="2.0" />
+                     </HBox.margin>
+                  </Pane>
+                  <Pane fx:id="paneMin">
+                     <children>
+                        <ImageView fx:id="minIcon" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#minimizeStage" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/Minimize.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="1.0" right="1.0" top="2.0" />
+                     </HBox.margin>
+                  </Pane>
+                  <Pane fx:id="paneClose">
+                     <children>
+                        <ImageView fx:id="closeIcon" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#closeStage" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/Close.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="1.0" right="1.0" top="2.0" />
+                     </HBox.margin>
+                  </Pane>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

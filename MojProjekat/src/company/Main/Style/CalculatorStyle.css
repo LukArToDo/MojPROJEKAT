@@ -1,0 +1,32 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+#apCalculator{
+	-fx-background-color:linear-gradient( from 0.0% 0.0% to 100.0% 100.0%, rgb(0,26,128) 0.0, rgb(51,102,51) 100.0);
+	-fx-font-weight: bold;
+}
+#lbDisplay {
+	-fx-background-color: orange;
+	-fx-border-style: dotted solid solid solid;
+	-fx-border-radius: 0 0 5 5;
+	-fx-text-alignment:right ;
+}
+
+#hbValuta{
+	-fx-border-style: solid solid none solid;
+	-fx-border-radius: 5 5 0 0 ;
+}
+#lbValuta, #lbKonverzija, #lbMemo{
+	-fx-background-color:orange;
+}
+#rbKM, #rbEUR{
+	-fx-text-fill:rgb(192,192,192);
+}
+
+.button:pressed {
+/*	-fx-background-color:rgb(191,227,136);*/
+	-fx-background-color:rgb(177,240,245);
+}
+
+
+ #m-, #mr, #mPlus, #prefix{
+ -fx-font-weight: normal;
+}

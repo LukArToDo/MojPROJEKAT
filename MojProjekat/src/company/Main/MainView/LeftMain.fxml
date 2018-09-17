@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="700.0" prefWidth="150.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="company.Main.MainView.LeftMainController">
+	<children>
+      <ImageView fitHeight="243.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/logoM.jpg" />
+         </image>
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" prefWidth="150.0" text="GLAVNI MENI" textFill="#3408c3">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+      </Label>
+      <Button fx:id="sifarnik" mnemonicParsing="false" onAction="#goToSifarnik" prefHeight="80.0" prefWidth="150.0" text="SIFARNIK">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="robno" mnemonicParsing="false" onAction="#goToRobno" prefHeight="80.0" prefWidth="150.0" text="ROBNO">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="finansije" mnemonicParsing="false" onAction="#goToFinansije" prefHeight="80.0" prefWidth="150.0" text="FINASNIJE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="analize" mnemonicParsing="false" onAction="#goToAnalize" prefHeight="80.0" prefWidth="150.0" text="ANALIZE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="ostalo" mnemonicParsing="false" onAction="#goToOstalo" prefHeight="80.0" prefWidth="150.0" text="OSTALO">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="exit" mnemonicParsing="false" onAction="#close" prefHeight="80.0" prefWidth="150.0" text="EXIT" textFill="#f50202">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>

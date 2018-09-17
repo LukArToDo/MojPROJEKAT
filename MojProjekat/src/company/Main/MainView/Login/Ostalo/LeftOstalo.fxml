@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="700.0" prefWidth="150.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="company.Main.MainView.Login.Ostalo.LeftOstaloController">
+<children>
+      <ImageView fitHeight="243.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Images/logoM.jpg" />
+         </image>
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+      </ImageView>
+       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" prefWidth="150.0" text="OSTALO" textFill="#3408c3">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+      </Label>
+      <Button fx:id="btnIzvodiKM" mnemonicParsing="false" onAction="#goToIzvodKM" prefHeight="80.0" prefWidth="150.0" text="IZVODI">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="3.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="btnPlate" mnemonicParsing="false" onAction="#goToPlate" prefHeight="80.0" prefWidth="150.0" text="PLATE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="3.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="btnSihtarica" mnemonicParsing="false" onAction="#goToSihtarica" prefHeight="80.0" prefWidth="150.0" text="ŠIHTARICA">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="3.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="btnPutNalog" mnemonicParsing="false" onAction="#goToPutniNalog" prefHeight="80.0" prefWidth="150.0" text="PUT.NALOG">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="3.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="btnToGlavniMeni" mnemonicParsing="false" onAction="#goToGlavniMeni" prefHeight="80.0" prefWidth="150.0" text="NAZAD U GL.MENI" textFill="#cd0909">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="3.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="exit" mnemonicParsing="false" onAction="#close" prefHeight="80.0" prefWidth="150.0" text="EXIT" textFill="#f50202">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="3.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>

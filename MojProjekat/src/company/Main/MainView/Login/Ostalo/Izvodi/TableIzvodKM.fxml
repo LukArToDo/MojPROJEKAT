@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.controlsfx.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="izvodKM" fx:id="izvodKM" focusTraversable="true" onKeyPressed="#handleKeyPress" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="company.Main.MainView.Login.Ostalo.Izvodi.TableIzvodKMController">
+   <children>
+       <TableView fx:id="tableIzvodKM" editable="true" layoutY="120.0" prefHeight="497.0" prefWidth="850.0">
+         <columns>
+            <TableColumn fx:id="colBrPromjena" prefWidth="28.0" text="R.B." />
+            <TableColumn fx:id="colPromjena" prefWidth="160.0" text="OPIS PROMJENE" />
+            <TableColumn fx:id="colZrac" minWidth="0.0" prefWidth="125.0" text="ZIRO-RACUN" />
+            <TableColumn fx:id="colKomitent" prefWidth="235.0" text="KOMITENT" />
+            <TableColumn fx:id="colDuguje" prefWidth="90.0" text="DUGUJE" />
+            <TableColumn fx:id="colPotrazuje" prefWidth="90.0" text="POTRAZUJE" />
+            <TableColumn fx:id="colKonto" prefWidth="60.0" text="KONTO" />
+            <TableColumn fx:id="colKontoSifra" prefWidth="60.0" text="SIFRA" />
+         </columns>
+      </TableView>
+      <TextField fx:id="vrstaNalogaText" alignment="CENTER_RIGHT" editable="false" layoutX="125.0" layoutY="45.0" onKeyPressed="#nalogVrstaKeyPress" prefHeight="30.0" prefWidth="100.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="brIzvodText" alignment="CENTER" layoutX="370.0" layoutY="45.0" prefHeight="30.0" prefWidth="110.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="datIzvodText" alignment="CENTER_RIGHT" layoutX="125.0" layoutY="75.0" prefHeight="30.0" prefWidth="100.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="bankaKontoText" alignment="CENTER_RIGHT" layoutX="370.0" layoutY="75.0" prefHeight="30.0" prefWidth="65.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="bankaKontoSifraText" alignment="CENTER_RIGHT" layoutX="436.0" layoutY="75.0" prefHeight="30.0" prefWidth="44.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="pStanjeText" alignment="CENTER_RIGHT" layoutX="640.0" layoutY="75.0" onKeyPressed="#setPretStanjeTF" prefHeight="30.0" prefWidth="150.0" />
+      <TextField fx:id="ukPromDugText" alignment="CENTER_RIGHT" layoutX="540.0" layoutY="630.0" prefHeight="30.0" prefWidth="100.0" />
+      <TextField fx:id="ukPromPotrText" alignment="CENTER_RIGHT" layoutX="641.0" layoutY="630.0" prefHeight="30.0" prefWidth="100.0" />
+      <TextField fx:id="nStanjeText" alignment="CENTER_RIGHT" layoutX="590.0" layoutY="680.0" prefHeight="30.0" prefWidth="150.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></TextField>
+      <TextField fx:id="nLimitText" alignment="CENTER_RIGHT" layoutX="160.0" layoutY="630.0" prefHeight="25.0" prefWidth="100.0" />
+      <TextField fx:id="rIznosText" alignment="CENTER_RIGHT" layoutX="160.0" layoutY="655.0" prefHeight="25.0" prefWidth="100.0" />
+      <TextField fx:id="raspText" alignment="CENTER_RIGHT" layoutX="160.0" layoutY="680.0" prefHeight="25.0" prefWidth="100.0" />
+      <TextField fx:id="dosPotText" alignment="CENTER_RIGHT" layoutX="160.0" layoutY="705.0" prefHeight="25.0" prefWidth="100.0" />
+      <TextField fx:id="bankaText" alignment="CENTER_RIGHT" editable="false" layoutX="640.0" layoutY="45.0" prefHeight="30.0" prefWidth="150.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="500.0">
+        <menus>
+          <Menu mnemonicParsing="false">
+            <items>
+              <MenuItem fx:id="uveziIzvodMenuIt" mnemonicParsing="false" onAction="#uveziIzvod" text="Uvezi izvod" />
+                  <MenuItem fx:id="unesiRucnoMenuIt" mnemonicParsing="false" onAction="#unesiRucno" text="Unesi rucno" />
+            </items>
+               <graphic>
+                  <Label prefWidth="60.0" text="NEW">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </graphic>
+          </Menu>
+          <Menu mnemonicParsing="false">
+               <graphic>
+                  <Label prefWidth="60.0" text="EDIT">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </graphic></Menu>
+          <Menu mnemonicParsing="false">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#delRowOfIzvod" text="Delete row  (F2)" />
+                  <MenuItem mnemonicParsing="false" onAction="#delAllOfIzvod" text="Delete ALL" />
+               </items>
+               <graphic>
+                  <Label prefWidth="60.0" text="DELETE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </graphic>
+          </Menu>
+            <Menu mnemonicParsing="false">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#print" text="Stampaj izvod" />
+               </items>
+               <graphic>
+                  <Label prefWidth="60.0" text="PRINT">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </graphic>
+            </Menu>
+            <Menu mnemonicParsing="false" onAction="#knjiziIzvod">
+               <graphic>
+                  <Label prefWidth="100.0" text="KNJIZI IZVOD">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </graphic></Menu>
+            <Menu mnemonicParsing="false">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#exitFromScene" text="Close">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Icons/Actions-edit-delete-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+               </items>
+               <graphic>
+                  <Label prefWidth="60.0" text="EXIT">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </graphic>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="420.0" layoutY="630.0" prefHeight="30.0" text="UKUPAN PROMET:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="530.0" layoutY="75.0" prefHeight="30.0" prefWidth="110.0" text="Prethodno stanje:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label id="lb1" fx:id="lb1" layoutX="30.0" layoutY="635.0" text="Neiskorišteni limit:" />
+      <Label id="lb2" fx:id="lb2" layoutX="30.0" layoutY="660.0" text="Rezervisani iznos:" />
+      <Label id="lb3" fx:id="lb3" layoutX="30.0" layoutY="685.0" text="Raspolozivo:" />
+      <Label id="lb4" fx:id="lb4" layoutX="30.0" layoutY="710.0" text="Dosp.potrazivanja:" />
+      <Label layoutX="420.0" layoutY="680.0" prefHeight="30.0" text="NOVO STANJE:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="270.0" layoutY="45.0" prefHeight="30.0" prefWidth="100.0" text="BROJ IZVODA:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="75.0" prefHeight="30.0" prefWidth="110.0" text="DATUM IZVODA:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="530.0" layoutY="45.0" prefHeight="30.0" prefWidth="110.0" text="BANKA:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="45.0" prefHeight="30.0" prefWidth="100.0" text="NALOG:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="270.0" layoutY="75.0" prefHeight="30.0" prefWidth="100.0" text="KONTO / SIFRA:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

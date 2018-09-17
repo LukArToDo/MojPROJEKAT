@@ -1,0 +1,140 @@
+/*
+1. Odd rows with white background color;
+2. ListView: when mouse over an item, highlight with a blue shade;
+3. ListView: when an item is selected, paint it with a gradient;
+4. ListView: when focus is lost from ListView, selected item should be painted with gradient;
+5. ListView: all items will start with text-fill black. But on mouse over and/or selected it will change to white.
+*/
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    /* 3:, 4: */
+    -fx-background-color: linear-gradient(#333 0%, #777 25%, #aaa 75%, #eee 100%);
+    -fx-text-fill: white; /* 5 */
+}
+.list-cell { -fx-text-fill: black; /* 5 */ }
+.list-cell:odd { -fx-background-color: white; /* 1 */ }
+.list-cell:even { -fx-background-color: #8f8; /* for information */ }
+.list-cell:filled:hover { 
+    -fx-background-color: #00f; /* 2 */
+    -fx-text-fill: white; /* 5 */
+}
+
+
+.button {
+
+-fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 4 , 0 );
+/*-fx-background-color:rgb(36,36,36);
+-fx-text-fill:rgb(255,255,255);*/
+
+}
+
+.button:hover {
+    -fx-padding: 10 15 13 15;
+    -fx-background-color:rgb(192,192,192);
+    -fx-text-fill:rgb(0,128,0);
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+
+.text-field
+{
+    -fx-background-color: transparent, lightgrey, transparent, lightgrey;
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-padding: 0.166667em;
+}
+ 
+.text-field:hover
+{
+    -fx-background-color: transparent, grey, transparent, white;
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-padding: 0.166667em;
+    -fx-text-fill: rgb(0,0,255) ;
+	-fx-font-size: 14;
+}
+ 
+.text-field:focused
+{
+    
+    -fx-background-color: transparent, lightgrey, transparent, white;
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-padding: 0.166667em;
+}
+
+
+.label {
+	-fx-text-fill:linear-gradient( from 0.0% 0.0% to 100.0% 100.0%, rgb(230,230,77) 0.0, rgb(230,77,77) 100.0)
+}
+
+.list-view {
+	-fx-border-color:derive(gray,80%);
+}
+
+
+
+/* The main scrollbar CSS class of ListView 
+.list-view .scroll-bar:horizontal ,
+.list-view .scroll-bar:vertical{
+    -fx-background-color:transparent;
+	
+}
+
+/* The increment and decrement button CSS class of scrollbar 
+.list-increment-button ,.list-view .decrement-button {
+    -fx-background-color:transparent;
+	-fx-border-color:derive(gray,80%);
+}
+
+/* The main scrollbar **track** CSS class  
+.list-view .scroll-bar:horizontal .track ,
+.list-view .scroll-bar:vertical .track{
+     -fx-background-color: transparent;
+	 -fx-border-color:derive(gray,80%);
+	 -fx-background-radius: 0em;
+}
+
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) 
+.list-view .scroll-bar:horizontal .thumb,
+.list-view .scroll-bar:vertical .thumb {
+    -fx-background-color:derive(black,90%);
+	-fx-background-insets: 0, 0, 0;
+	-fx-background-radius: 0em;
+	
+}
+
+
+/* ------------------------------------------------------------------------------------- */
+/** EVENT CSS **/
+/* ------------------------------------------------------------------------------------- */
+
+/* The main scrollbar **track** CSS class on event of "hover" and "pressed" 
+
+.list-view .scroll-bar:horizontal:hover .track ,
+.list-view .scroll-bar:horizontal:pressed .track ,
+.list-view .scroll-bar:vertical:hover .track,
+.list-view .scroll-bar:vertical:pressed .track{
+     -fx-background-color: derive(#434343,70%);
+	 -fx-opacity: 0.5;
+	 -fx-background-radius: 0em;
+    
+}
+
+/* The main scrollbar **thumb** CSS class on event of "hover" and "pressed" 
+.list-view .scroll-bar .thumb:hover,
+.list-view .scroll-bar .thumb:pressed{
+    -fx-background-color: derive(black,50%);
+}
+
+
+.list-increment-button:hover ,.list-view .decrement-button:hover {
+    -fx-background-color:derive(gray,100%);
+	-fx-border-color:derive(gray,80%);	
+	-fx-padding:10px;
+}
+*/
+
+.list-view .scroll-bar:vertical .increment-arrow,
+.list-view .scroll-bar:vertical .decrement-arrow,
+.list-view .scroll-bar:vertical .increment-button,
+.list-view .scroll-bar:vertical .decrement-button {
+    -fx-padding:0;
+}

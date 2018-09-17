@@ -1,0 +1,140 @@
+/* #popUpKorisnici {
+	 -fx-background-color: #ffffff;
+}
+
+#textFlowPUKor {
+	-fx-background-color: #ffffff;
+	-fx-text-fill: red;
+	-fx-font-size: 12pt;
+}
+#columnImePUKor, #columnPrezimePUKor {
+	-fx-border-color: red;
+	-fx-text-fill:rgb(0,0,160);
+	-fx-font-size:10pt;
+	-fx-font-family: arial;
+	
+}
+.menu-item {
+    -fx-background-color: derive(#00ad8d,80%);
+}
+
+*/
+
+  /*
+ * Empty Stylesheet file.
+ */
+
+.root{
+    -fx-background-color: #262626;
+}
+
+.table-view{
+   -fx-background-color: transparent;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+/* Spaltenköpfe
+    Struktur column-header-background -> column-header */
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(#131313 0%, #424141 100%);
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: white;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #616161;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #424242;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */  
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #005797;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background, 
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+
+
+
+.table-view > .virtual-flow > .scroll-bar > .increment-button, 
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}
+
+.table-view .filler{
+	-fx-padding: 0.0em;
+}
+
+.calendar-cell:hover { 
+    -fx-background-color: rgba(135,206,235,0.7);
+    -fx-text-fill: white;   
+}
+
+.calendar-cell:pressed { 
+    -fx-background-color: rgba(135,186,215,0.7);
+    -fx-text-fill: white;   
+}
+
+.calendar-cell-selected { 
+    -fx-background-color: rgba(105,176,195,0.7);
+    -fx-text-fill: white;   
+}
+
+.calendar-cell-today { 
+    -fx-background-color: rgba(155,155,19,0.7);
+    -fx-text-fill: white;
+}
+
+.calendar-cell-inactive { 
+    -fx-text-fill: darkgray;
+}
+
+
+.button{
+    -fx-effect: dropshadow(two-pass-box , darkgray, 10, 0.0 , 4, 5);
+    -fx-background-color: rgba(205,205,205,0.7);
+    -fx-background-radius: 15 15 15 15;
+    -fx-background-insets: 2 2 2 2 ;
+}
+
+.button:pressed{
+    -fx-background-color: rgba(180,180,180,0.7);
+}
+
+.button:hover{
+    -fx-background-color: rgba(235,235,235,0.7);
+}
+
+.button:focused{
+    -fx-background-color: rgba(205,205,205,0.7);
+
+}

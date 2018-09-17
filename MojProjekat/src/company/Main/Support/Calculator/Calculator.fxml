@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefWidth="220.0" stylesheets="@../../Style/CalculatorStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="company.Main.Support.Calculator.CalculatorController">
+   <children>
+      <AnchorPane fx:id="apCalculator" prefHeight="310.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <VBox prefHeight="60.0" prefWidth="200.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+               <children>
+                  <HBox fx:id="hbValuta" prefHeight="19.0" prefWidth="190.0">
+                     <children>
+                        <Label fx:id="lbValuta" prefHeight="38.0" prefWidth="40.0" text="Label">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbKonverzija" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="130.0" textAlignment="RIGHT">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbMemo" prefHeight="17.0" prefWidth="20.0">
+                           <font>
+                              <Font size="10.0" />
+                           </font></Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label fx:id="lbDisplay" contentDisplay="RIGHT" prefHeight="40.0" prefWidth="190.0" textAlignment="RIGHT">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <RadioButton fx:id="rbKM" layoutX="11.0" layoutY="68.0" mnemonicParsing="false" selected="true" text="KM">
+               <font>
+                  <Font size="8.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="currency" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbEUR" layoutX="40.0" layoutY="68.0" mnemonicParsing="false" text="EUR" toggleGroup="$currency">
+               <font>
+                  <Font size="8.0" />
+               </font>
+            </RadioButton>
+            <Group AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="116.0">
+               <children>
+                  <HBox fx:id="hb1" layoutY="116.0" prefHeight="23.0" prefWidth="200.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0">
+                     <children>
+                        <Button id="mc" fx:id="btnMC" mnemonicParsing="false" prefWidth="35.0" text="MC">
+                           <HBox.margin>
+                              <Insets left="2.0" right="8.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button id="mr" fx:id="btnMR" mnemonicParsing="false" prefWidth="35.0" text="MR">
+                           <HBox.margin>
+                              <Insets right="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button id="m-" fx:id="btnMminus" mnemonicParsing="false" prefWidth="35.0" text="M-">
+                           <HBox.margin>
+                              <Insets right="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button id="mPlus" fx:id="btnMplus" mnemonicParsing="false" prefWidth="35.0" text="M+">
+                           <HBox.margin>
+                              <Insets right="8.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button id="/" fx:id="btnDivide" mnemonicParsing="false" prefWidth="35.0" text="/">
+                           <HBox.margin>
+                              <Insets right="1.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hb4" layoutY="206.0" prefHeight="23.0" prefWidth="200.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0">
+                     <children>
+                        <Button id="sqr" fx:id="btnSQR" mnemonicParsing="false" prefWidth="35.0" text="√¯">
+                           <HBox.margin>
+                              <Insets left="2.0" right="8.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button id="3" fx:id="btn3" mnemonicParsing="false" prefWidth="35.0" text="3">
+                           <HBox.margin>
+                              <Insets right="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button id="2" fx:id="btn2" mnemonicParsing="false" prefWidth="35.0" text="2">
+                           <HBox.margin>
+                              <Insets right="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button id="1" fx:id="btn1" mnemonicParsing="false" prefWidth="35.0" text="1">
+                           <HBox.margin>
+                              <Insets right="8.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button id="+" fx:id="btnAdd" mnemonicParsing="false" prefWidth="35.0" text="+">
+                           <HBox.margin>
+                              <Insets right="1.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hb5" layoutY="234.0" prefHeight="23.0" prefWidth="200.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0">
+                     <children>
+                        <Button id="precent" fx:id="btnPrecent" mnemonicParsing="false" prefWidth="35.0" text="\%">
+                           <HBox.margin>
+                              <Insets left="2.0" right="8.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button id="0" fx:id="btn0" mnemonicParsing="false" prefWidth="35.0" text="0">
+                           <HBox.margin>
+                              <Insets right="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button id="." fx:id="btnDot" mnemonicParsing="false" prefWidth="35.0" text=".">
+                           <HBox.margin>
+                              <Insets right="8.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button id="result" fx:id="btnResult" mnemonicParsing="false" prefHeight="23.0" prefWidth="73.0" text="=">
+                           <HBox.margin>
+                              <Insets right="1.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hb2" layoutY="151.0" prefHeight="23.0" prefWidth="200.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0">
+                     <children>
+                        <Button id="arrow" fx:id="btnPosition" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="→">
+                           <HBox.margin>
+                              <Insets left="2.0" right="8.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button id="7" fx:id="btn7" mnemonicParsing="false" prefWidth="35.0" text="7">
+                           <HBox.margin>
+                              <Insets right="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button id="8" fx:id="btn8" mnemonicParsing="false" prefWidth="35.0" text="8">
+                           <HBox.margin>
+                              <Insets right="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button id="9" fx:id="btn9" mnemonicParsing="false" prefWidth="35.0" text="9">
+                           <HBox.margin>
+                              <Insets right="8.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button id="x" fx:id="btnMultiple" mnemonicParsing="false" prefWidth="35.0" text="x">
+                           <HBox.margin>
+                              <Insets right="1.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hb3" layoutY="178.0" prefHeight="23.0" prefWidth="200.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0">
+                     <children>
+                        <Button id="prefix" fx:id="btnPrefix" mnemonicParsing="false" prefWidth="35.0" text="+/-">
+                           <HBox.margin>
+                              <Insets left="2.0" right="8.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button id="6" fx:id="btn6" mnemonicParsing="false" prefWidth="35.0" text="6">
+                           <HBox.margin>
+                              <Insets right="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button id="5" fx:id="btn5" mnemonicParsing="false" prefWidth="35.0" text="5">
+                           <HBox.margin>
+                              <Insets right="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button id="4" fx:id="btn4" mnemonicParsing="false" prefWidth="35.0" text="4">
+                           <HBox.margin>
+                              <Insets right="8.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button id="-" fx:id="btnSubstract" mnemonicParsing="false" prefWidth="35.0" text="-">
+                           <HBox.margin>
+                              <Insets right="1.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </Group>
+            <Button fx:id="btnC" layoutX="92.0" layoutY="72.0" mnemonicParsing="false" onAction="#clearLast" prefHeight="25.0" prefWidth="55.0" text="CE/C" />
+            <Button fx:id="btnAC" layoutX="150.0" layoutY="72.0" mnemonicParsing="false" onAction="#clearAll" prefHeight="25.0" prefWidth="55.0" text="ON/AC" />
+            <Button fx:id="btnClose" layoutX="150.0" layoutY="273.0" mnemonicParsing="false" onAction="#closeCalculator" prefHeight="25.0" prefWidth="55.0" text="CLOSE" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

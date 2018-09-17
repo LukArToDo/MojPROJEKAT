@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="700.0" prefWidth="150.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="company.Main.MainView.Login.Sifarnik.LeftSifarnikController">
+<children>
+      <ImageView fitHeight="243.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Images/logoM.jpg" />
+         </image>
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+      </ImageView>
+       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" prefWidth="150.0" text="ŠIFARNIK" textFill="#3408c3">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+      </Label>
+      <Button fx:id="btnKorisnici" mnemonicParsing="false" onAction="#goToKorisnici" prefHeight="80.0" prefWidth="150.0" text="KORISNICI">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="btnKomitenti" mnemonicParsing="false" onAction="#goToKomitenti" prefHeight="80.0" prefWidth="150.0" text="KOMITENTI">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="btnArtikli" mnemonicParsing="false" onAction="#goToArtikli" prefHeight="80.0" prefWidth="150.0" text="ARTIKLI">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="btnKontniPlan" mnemonicParsing="false" onAction="#goToKontniPlan" prefHeight="80.0" prefWidth="150.0" text="KONTNI PLAN">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="btnCompany" mnemonicParsing="false" onAction="#goToCompanyData" prefHeight="80.0" prefWidth="150.0" text="FIRMA I LOGO">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="btnToGlavniMeni" mnemonicParsing="false" onAction="#goToGlavniMeni" prefHeight="80.0" prefWidth="150.0" text="NAZAD U GL.MENI" textFill="#cd0909">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="exit" mnemonicParsing="false" onAction="#close" prefHeight="80.0" prefWidth="150.0" text="EXIT" textFill="#f50202">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>

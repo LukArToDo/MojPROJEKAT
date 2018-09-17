@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="company.Main.MainView.Login.Sifarnik.CompanyData.CompanyDataController">
+   <children>
+      <VBox fx:id="vbBasicData" layoutX="25.0" layoutY="52.0">
+         <children>
+            <Label layoutX="591.0" layoutY="286.0" prefHeight="17.0" prefWidth="187.0" text="Naziv komapnije: / posl.jedinice" />
+            <TextField fx:id="tfCompanyName" layoutX="591.0" layoutY="303.0" prefHeight="25.0" prefWidth="187.0" />
+            <Label layoutX="591.0" layoutY="338.0" prefHeight="17.0" prefWidth="187.0" text="Adresa:">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="tfStreet" layoutX="591.0" layoutY="355.0" />
+            <Label text="Grad:">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="tfCity" layoutX="591.0" layoutY="445.0" />
+            <Label text="Postanski broj:">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="tfPostCode" layoutX="591.0" layoutY="500.0" />
+            <Label text="JIB:" />
+            <TextField fx:id="tfJIB" layoutX="591.0" layoutY="557.0" />
+            <HBox>
+               <children>
+                  <Label text="PDV obveznik:" />
+                  <RadioButton fx:id="rbDaPDV" mnemonicParsing="false" selected="true" text="DA">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="pdvUser" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rbNePDV" mnemonicParsing="false" text="NE" toggleGroup="$pdvUser">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </RadioButton>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <TextField fx:id="tfPDV" layoutX="591.0" layoutY="610.0">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></TextField>
+            <Label fx:id="lbDani" text="Maticni broj:">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="tfMatBroj" />
+            <Label text="Direktor:">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="tfDirector" />
+         </children>
+      </VBox>
+      <TextField fx:id="tfSifraPJ" layoutX="294.0" layoutY="69.0" prefHeight="25.0" prefWidth="58.0" />
+      <AnchorPane fx:id="apImages" layoutX="531.0" layoutY="27.0">
+         <children>
+            <Label layoutX="9.0" layoutY="229.0" text="PECAT i POTPIS:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnSignCancel" layoutX="176.0" layoutY="391.0" mnemonicParsing="false" onAction="#cancelSign" prefHeight="25.0" prefWidth="60.0" text="Otkazi" />
+            <Button fx:id="btnSearchLogo" layoutX="16.0" layoutY="163.0" mnemonicParsing="false" onAction="#searchLogo" prefHeight="25.0" prefWidth="60.0" text="Dodaj" />
+            <ImageView fx:id="stampView" fitHeight="90.0" fitWidth="156.0" layoutX="16.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="btnSignDelete" layoutX="96.0" layoutY="391.0" mnemonicParsing="false" onAction="#deleteSign" prefHeight="25.0" prefWidth="60.0" text="Brisi" />
+            <Label layoutX="16.0" layoutY="543.0" prefHeight="17.0" prefWidth="168.0" text="Pecat komapnije:" />
+            <Label layoutX="9.0" text="LOGO:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnLogoCancel" layoutX="176.0" layoutY="163.0" mnemonicParsing="false" onAction="#cancelLogo" prefHeight="25.0" prefWidth="60.0" text="Otkazi" />
+            <Label layoutX="16.0" layoutY="140.0" prefHeight="17.0" prefWidth="168.0" text="Logo komapnije:" />
+            <Button fx:id="btnSearchStamp" layoutX="16.0" layoutY="565.0" mnemonicParsing="false" onAction="#searchStamp" prefHeight="25.0" prefWidth="60.0" text="Dodaj" />
+            <Separator layoutY="208.0" prefHeight="1.0" prefWidth="252.0" />
+            <Label layoutX="16.0" layoutY="369.0" prefHeight="17.0" prefWidth="168.0" text="Pecat kompanije sa potpisom:" />
+            <Button fx:id="btnSearchSign" layoutX="17.0" layoutY="391.0" mnemonicParsing="false" onAction="#searchSign" prefHeight="25.0" prefWidth="60.0" text="Dodaj" />
+            <Button fx:id="btnStampCancel" layoutX="176.0" layoutY="565.0" mnemonicParsing="false" onAction="#cancelStamp" prefHeight="25.0" prefWidth="60.0" text="Otkazi" />
+            <Button fx:id="btnStampDelete" layoutX="96.0" layoutY="565.0" mnemonicParsing="false" onAction="#deleteStamp" prefHeight="25.0" prefWidth="60.0" text="Brisi" />
+            <ImageView fx:id="logoView" fitHeight="97.0" fitWidth="156.0" layoutX="16.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="btnLogoDelete" layoutX="96.0" layoutY="163.0" mnemonicParsing="false" onAction="#deleteLogo" prefHeight="25.0" prefWidth="60.0" text="Brisi" />
+            <ImageView fx:id="signView" fitHeight="90.0" fitWidth="156.0" layoutX="16.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <Separator layoutX="521.0" layoutY="28.0" orientation="VERTICAL" prefHeight="608.0" prefWidth="3.0" />
+      <Label layoutX="25.0" layoutY="19.0" text="OSNOVNI PODACI:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <VBox fx:id="vbContact" layoutX="294.0" layoutY="142.0">
+         <children>
+            <Label layoutX="591.0" layoutY="286.0" prefHeight="17.0" prefWidth="156.0" text="Telefon:" />
+            <TextField fx:id="tfPhone" layoutX="591.0" layoutY="303.0" prefHeight="25.0" prefWidth="187.0" />
+            <Label layoutX="591.0" layoutY="338.0" prefHeight="17.0" prefWidth="187.0" text="Fax:">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="tfFax" layoutX="591.0" layoutY="355.0" />
+            <Label text="Mob:">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="tfMob" layoutX="591.0" layoutY="445.0" />
+            <Label text="E-mail:">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="tfMail" layoutX="591.0" layoutY="500.0" />
+            <Label text="Web:">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="tfWeb" layoutX="591.0" layoutY="557.0" />
+         </children>
+      </VBox>
+      <Label layoutX="294.0" layoutY="115.0" text="KONTAKT:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <VBox fx:id="vbAccount" layoutX="294.0" layoutY="424.0">
+         <children>
+            <Label layoutX="591.0" layoutY="286.0" prefHeight="17.0" prefWidth="156.0" text="Ziro-racun:" />
+            <TextField fx:id="tfDomRacun" layoutX="591.0" layoutY="303.0" prefHeight="25.0" prefWidth="187.0" />
+            <Label layoutX="591.0" layoutY="338.0" prefHeight="17.0" prefWidth="187.0" text="Naziv banke:">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="tfBanka" layoutX="591.0" layoutY="355.0" />
+            <Label text="Devizni racun:">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="tfInoRacun" layoutX="591.0" layoutY="445.0" />
+            <Label text="IBAN::">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="tfIBAN" layoutX="591.0" layoutY="500.0" />
+            <Label text="SWIFT:">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="tfSWIFT" layoutX="591.0" layoutY="557.0" />
+         </children>
+      </VBox>
+      <Label layoutX="294.0" layoutY="52.0" text="Sifra :" />
+      <HBox fx:id="hbBtns" layoutX="18.0" layoutY="657.0">
+         <children>
+            <Button fx:id="btnAdd" layoutX="18.0" layoutY="657.0" mnemonicParsing="false" onAction="#addToDataBase" prefWidth="55.0" text="Dodaj">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin></Button>
+            <Button fx:id="btnEdit" layoutX="79.0" layoutY="657.0" mnemonicParsing="false" onAction="#editData" prefWidth="55.0" text="Izmjeni">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin></Button>
+            <Button fx:id="btnDelete" layoutX="139.0" layoutY="657.0" mnemonicParsing="false" onAction="#deleteData" prefWidth="55.0" text="Brisi">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin></Button>
+            <Button fx:id="btnClear" layoutX="200.0" layoutY="657.0" mnemonicParsing="false" onAction="#clear" prefWidth="93.0" text="Cancel / New">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin></Button>
+         </children>
+      </HBox>
+      <Separator layoutX="524.0" layoutY="634.0" prefHeight="3.0" prefWidth="245.0" />
+      <Label layoutX="294.0" layoutY="397.0" text="RACUNI:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnSaveImg" layoutX="603.0" layoutY="661.0" mnemonicParsing="false" onAction="#saveImgChanges" prefHeight="25.0" prefWidth="108.0" text="Sacuvaj izmjene" />
+      <Button fx:id="btnClose" layoutX="721.0" layoutY="653.0" mnemonicParsing="false" onAction="#close" prefHeight="33.0" prefWidth="108.0" text="Zatvori" />
+      <Separator layoutX="300.0" layoutY="387.0" prefHeight="3.0" prefWidth="168.0" />
+      <TableView fx:id="tablePregled" layoutX="18.0" layoutY="458.0" prefHeight="167.0" prefWidth="231.0">
+         <columns>
+            <TableColumn fx:id="colSifraPJ" prefWidth="64.0" text="SIFRA" />
+            <TableColumn fx:id="colNazivPJ" prefWidth="166.0" text="NAZIV POSLOV.JEDNICE" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
