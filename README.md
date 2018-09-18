@@ -6,8 +6,8 @@ Some initial ideas:
     
    
    - GUI: JavaFX
-        - Sensitive to movement and mouse click
-    - database: MySQL
+        - Sensitive to movement and mouse click 
+   - database: MySQL
         - Automatically saves backup data every first Monday of the month
         - manual data backup
         - manually resetting data from previously backed up data
